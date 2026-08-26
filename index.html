@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K Research Central Asia | Ответы на вопросы</title>
+  <style>
+    :root {
+      --color-text:       #555555;
+      --color-heading:    #333333;
+      --color-line:       #d1d1d1;
+      --color-button:     #9b9ba1;
+      --color-footer-bg:  #dedede;
+      --color-footer-text:#767676;
+      --content-width:    1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--color-text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Шапка */
+    .header-utility {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      font-size: 14px;
+    }
+
+    .header-utility a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 16px;
+    }
+
+    .header-utility .divider {
+      width: 1px;
+      height: 18px;
+      background: var(--color-line);
+    }
+
+    .header-utility .social-icon img {
+      display: block;
+      height: 20px;
+    }
+
+    .header-utility .external-mark {
+      font-size: 11px;
+    }
+
+    .header-logo {
+      padding: 6px 0 18px;
+    }
+
+    .header-logo img {
+      display: block;
+      height: 88px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 14px 0;
+      border-top: 1px solid var(--color-line);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .header-nav .menu {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-nav .menu a {
+      padding: 0 18px;
+    }
+
+    .header-nav .menu a:first-child {
+      padding-left: 0;
+    }
+
+    .header-nav .divider {
+      width: 1px;
+      height: 18px;
+      background: var(--color-line);
+    }
+
+    .search-box {
+      display: flex;
+    }
+
+    .search-box input {
+      width: 210px;
+      padding: 8px 12px;
+      border: 1px solid var(--color-line);
+      border-right: none;
+      color: var(--color-text);
+      font-size: 14px;
+    }
+
+    .search-box button {
+      padding: 0 14px;
+      border: 1px solid var(--color-line);
+      background: #ffffff;
+      color: var(--color-text);
+      cursor: pointer;
+    }
+
+    /* Контент страницы */
+    .page {
+      padding: 38px 0 10px;
+    }
+
+    .page h1 {
+      margin: 0 0 20px;
+      color: var(--color-heading);
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+
+    .page h2 {
+      margin: 0 0 18px;
+      color: var(--color-heading);
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .page p {
+      margin: 0 0 14px;
+    }
+
+    .block {
+      padding-bottom: 20px;
+    }
+
+    .block + .block {
+      padding-top: 38px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    .small-text {
+      font-size: 14px;
+    }
+
+    .list {
+      margin: 0 0 14px;
+      padding-left: 20px;
+    }
+
+    .list li {
+      margin-bottom: 6px;
+    }
+
+    /* Кнопки скачивания */
+    .download-buttons {
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 0 12px 12px 0;
+      padding: 12px 26px;
+      border: 1px solid var(--color-button);
+      font-size: 14px;
+    }
+
+    .button:hover {
+      text-decoration: none;
+    }
+
+    .button-filled {
+      background: var(--color-button);
+      color: #ffffff;
+    }
+
+    .button-filled:hover {
+      background: #8a8a90;
+    }
+
+    .button-outline {
+      background: #ffffff;
+    }
+
+    .button-outline:hover {
+      background: #f2f2f2;
+    }
+
+    /* Шаги участия */
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      flex: 1 1 210px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-line);
+      counter-increment: step;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      display: block;
+      margin-bottom: 10px;
+      color: var(--color-button);
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .steps b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--color-heading);
+    }
+
+    .steps span {
+      font-size: 14px;
+    }
+
+    /* Приветственные баллы */
+    .promo {
+      padding: 30px 34px;
+      background: #f4f4f4;
+    }
+
+    .promo h2 {
+      margin-bottom: 10px;
+    }
+
+    .promo .promo-lead {
+      margin-bottom: 16px;
+      color: var(--color-heading);
+      font-size: 19px;
+    }
+
+    .promo p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Вопросы и ответы */
+    .faq-item {
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 15px 34px 15px 0;
+      color: var(--color-heading);
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 12px;
+      right: 4px;
+      color: var(--color-button);
+      font-size: 19px;
+    }
+
+    .faq-item[open] summary::after {
+      content: "-";
+    }
+
+    .faq-answer {
+      padding-bottom: 18px;
+    }
+
+    .faq-answer p:last-child,
+    .faq-answer ul:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Контакты и документы */
+    .contacts p {
+      margin: 0 0 6px;
+    }
+
+    .contacts .contacts-note {
+      margin-top: 14px;
+    }
+
+    .documents a {
+      display: block;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .documents a:first-of-type {
+      border-top: 1px solid var(--color-line);
+    }
+
+    /* Подвал */
+    .footer {
+      margin-top: 30px;
+      padding: 40px 0 34px;
+      background: var(--color-footer-bg);
+      color: var(--color-footer-text);
+      font-size: 14px;
+    }
+
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+    }
+
+    .footer-column {
+      flex: 1 1 210px;
+    }
+
+    .footer-column h4 {
+      margin: 0 0 16px;
+      color: var(--color-footer-text);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .footer-column h4.second-title {
+      margin-top: 30px;
+    }
+
+    .footer-column a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #cfcfcf;
+    }
+
+    .footer-form input {
+      display: block;
+      width: 100%;
+      max-width: 260px;
+      margin-bottom: 12px;
+      padding: 9px 12px;
+      border: 1px solid #cfcfcf;
+      background: #ffffff;
+      color: var(--color-footer-text);
+      font-size: 14px;
+    }
+
+    .footer-form button {
+      margin-bottom: 10px;
+      padding: 10px 24px;
+      border: none;
+      background: var(--color-button);
+      color: #ffffff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      padding: 26px 0 30px;
+      background: #ffffff;
+      color: var(--color-footer-text);
+      font-size: 14px;
+    }
+
+    .footer-bottom .cookie-link {
+      margin-bottom: 18px;
+    }
+
+    .footer-bottom .copyright-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Мобильная версия */
+    @media (max-width: 700px) {
+      .page h1 {
+        font-size: 21px;
+      }
+
+      .header-logo img {
+        height: 64px;
+      }
+
+      .header-utility {
+        justify-content: flex-start;
+      }
+
+      .header-utility a:first-child {
+        padding-left: 0;
+      }
+
+      .button {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+
+      .search-box input {
+        flex: 1;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 1. Шапка -->
+<header class="container">
+  <div class="header-utility">
+    <a class="social-icon" href="https://www.instagram.com/k_research_central_asia">
+      <img src="https://k-research.kz/build/img/instagram_small.jpg" alt="Instagram">
+    </a>
+    <span class="divider"></span>
+    <a class="social-icon" href="https://t.me/kantarkazakhstan">
+      <img src="https://kantar.kz/build/img/PicTlgrm2Small.png" alt="Telegram">
+    </a>
+    <span class="divider"></span>
+    <a class="social-icon" href="https://www.facebook.com/KresearchCentralAsia">
+      <img src="https://k-research.kz/build/img/FBSmall.jpg" alt="Facebook">
+    </a>
+    <span class="divider"></span>
+    <a href="https://k-research.kz/about-us/o-kompanii">О компании K Research Central Asia</a>
+    <span class="divider"></span>
+    <a href="https://k-research.kz/glossaries">Глоссарий</a>
+    <span class="divider"></span>
+    <a href="https://www.kantar.com/">Kantar <span class="external-mark">↗</span></a>
+  </div>
+
+  <div class="header-logo">
+    <a href="https://k-research.kz">
+      <img src="https://k-research.kz/build/img/logo.png" alt="K Research Central Asia">
+    </a>
+  </div>
+
+  <div class="header-nav">
+    <nav class="menu">
+      <a href="https://k-research.kz/expertises">Наша экспертиза</a>
+      <span class="divider"></span>
+      <a href="https://k-research.kz/methodologies">Основные методики</a>
+      <span class="divider"></span>
+      <a href="https://k-research.kz/presscenters">Пресс-центр</a>
+      <span class="divider"></span>
+      <a href="https://k-research.kz/research">Результаты исследований</a>
+    </nav>
+
+    <div class="search-box">
+      <input type="text" placeholder="Поиск">
+      <button type="button">⌕</button>
+    </div>
+  </div>
+
+</header>
+
+
+<main class="page">
+  <div class="container">
+
+    <!-- 2. Заголовок и вводная -->
+    <section class="block">
+      <h1>Ответы на вопросы участников исследований</h1>
+    </section>
+
+
+    <!-- 4. Об участии в исследованиях -->
+    <section class="block">
+      <h2>Об участии в исследованиях</h2>
+
+      <details class="faq-item">
+        <summary>Как стать участником исследования?</summary>
+        <div class="faq-answer">
+          <p>
+            Мы приглашаем участников сами - по итогам проведённых опросов или из числа людей, ранее давших согласие на участие в наших исследованиях.
+          </p>
+          <p>
+            Под каждое исследование нужны люди определённого профиля: по возрасту, полу, региону проживания, используемым устройствам или сервисам. Поэтому приглашения приходят не всем и не всегда. Это требование выборки, а не отбор участников.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Обязательно ли участвовать, если пришло приглашение?</summary>
+        <div class="faq-answer">
+          <p>
+            Нет. Участие в любом нашем исследовании полностью добровольное. Вы сами решаете, откликаться на приглашение или нет.
+          </p>
+          <p>
+            Отказ от участия в одном исследовании не влияет на возможность участвовать в других.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Что требуется от участника?</summary>
+        <div class="faq-answer">
+          <p>
+            Это зависит от формата исследования. Разовый опрос - это анкета, которая занимает от нескольких минут до получаса. Долгосрочные проекты, например измерение аудитории мобильного Интернета, предполагают участие в течение нескольких месяцев.
+          </p>
+          <p>
+            Что именно потребуется, сколько времени это займёт и на какой срок рассчитано участие - всегда указано в приглашении, до того как вы дадите согласие.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Как прекратить участие в исследовании?</summary>
+        <div class="faq-answer">
+          <p>
+            Прекратить участие можно в любой момент и без объяснения причин. Напишите нам на
+            <a href="mailto:info@k-research.kz">info@k-research.kz</a>
+            или позвоните по телефону +7 (727) 347 05 03 или +7 (800) 080 53 05.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Зачем в анкете спрашивают о возрасте, образовании, роде занятий и составе семьи?</summary>
+        <div class="faq-answer">
+          <p>
+            Эти сведения нужны, чтобы отнести вас к социально-демографической группе.
+          </p>
+          <p>
+            Смысл измерения не в том, чтобы узнать, сколько человек посмотрело передачу, а в том, чтобы понять, кто именно её смотрел. Разные группы населения потребляют медиа по-разному, и без этих признаков цифра аудитории остаётся бессмысленной: непонятно, кто за ней стоит.
+          </p>
+          <p>
+            Ваши ответы на эти вопросы не связываются с вашим именем и используются только в обобщённом виде.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Зачем нужны мой e-mail и номер телефона?</summary>
+        <div class="faq-answer">
+          <p>
+            Для связи с вами по вопросам, которые возникают в ходе участия: приглашения к исследованиям, инструкции, уточнения, вопросы по вознаграждению.
+          </p>
+          <p>
+            Мы не передаём ваши контакты третьим лицам и не используем их для рекламных рассылок.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- 6. Вознаграждение -->
+    <section class="block">
+      <h2>Вознаграждение</h2>
+
+      <details class="faq-item">
+        <summary>За исследования предусмотрено вознаграждение?</summary>
+        <div class="faq-answer">
+          <p>
+            Предусмотрено ли вознаграждение в конкретном исследовании, всегда указано в приглашении.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Каков размер вознаграждения и как оно выплачивается?</summary>
+        <div class="faq-answer">
+          <p>
+            Размер, способ и сроки выплаты зависят от конкретного исследования и указываются в приглашении. Универсальных условий нет: объём участия в разных проектах отличается.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Что нужно сделать, чтобы получить вознаграждение?</summary>
+        <div class="faq-answer">
+          <p>
+            Выполнить условия участия, описанные в приглашении.
+          </p>
+          <p>
+            Если исследование предполагает долгосрочное участие, вознаграждение зависит от вашей фактической активности за период. Условия начисления описываются в материалах конкретного проекта.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Вознаграждение не пришло - что делать?</summary>
+        <div class="faq-answer">
+          <p>
+            Напишите нам на почту
+            <a href="mailto:info@k-research.kz">info@k-research.kz</a>,
+            или позвоните по телефону +7 (727) 347 05 03 или +7 (800) 080 53 05. Указав, о каком исследовании идёт речь.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- 8. Вопросы и связь с нами -->
+    <section class="block contacts">
+      <h2>Вопросы и связь с нами</h2>
+
+      <p>Напишите или позвоните нам, если:</p>
+
+      <ul class="list">
+        <li>непонятна инструкция из приглашения;</li>
+        <li>не открывается ссылка;</li>
+        <li>возникла техническая проблема;</li>
+        <li>не пришло вознаграждение;</li>
+        <li>вы хотите отказаться от дальнейшего участия в исследованиях.</li>
+      </ul>
+
+      <p>
+        <a href="mailto:info@k-research.kz">info@k-research.kz</a>
+      </p>
+
+      <p>
+        +7 (727) 347 05 03
+      </p>
+
+      <p>
+        +7 (800) 080 53 05 
+      </p>
+
+      <p class="contacts-note">
+        Мы на связи в будние дни с 9:00 до 18:00 по алматинскому времени. Чтобы мы разобрались быстрее, укажите в обращении, о каком исследовании идёт речь, и опишите, что именно не работает.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+
+
+<!-- 9. Подвал -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-columns">
+
+      <div class="footer-column">
+        <h4>Наша Экспертиза</h4>
+        <a href="https://k-research.kz/expertises/issledovaniya-smi">Исследования СМИ</a>
+        <a href="https://k-research.kz/expertises/monitoring-smi">Мониторинг СМИ</a>
+        <a href="https://k-research.kz/expertises/issledovaniya-customer-strategies">Исследования Customer Strategies</a>
+        <a href="https://k-research.kz/expertises/issledovaniya-digitalresearch">Исследования Digital research</a>
+        <a href="https://k-research.kz/expertises/qualitative-issledovaniya">Qualitative исследования</a>
+        <a href="https://k-research.kz/expertises/issledovaniya-brand-communication">Исследования Brand &amp; Communication</a>
+        <a href="https://k-research.kz/expertises/issledovaniya-inovations-product-development">Исследования Inovations &amp; Product Development</a>
+        <a href="https://k-research.kz/expertises/media-marketing-index">Media Marketing Index</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Основные методики</h4>
+        <a href="https://k-research.kz/methodologies/concept-evaluate">Concept eValuate</a>
+        <a href="https://k-research.kz/methodologies/conversion-model">Conversion Model</a>
+        <a href="https://k-research.kz/methodologies/matrix">Matrix</a>
+        <a href="https://k-research.kz/methodologies/needscope">NeedScope</a>
+        <a href="https://k-research.kz/methodologies/shopper-dimensions">Shopper Dimensions</a>
+        <a href="https://k-research.kz/methodologies/tri-m">TRI*M</a>
+
+        <h4 class="second-title">Вакансии</h4>
+        <a href="https://k-research.kz/vacancy/manager">Открытые вакансии</a>
+        <a href="https://k-research.kz/practics">Практика в компании Kantar</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Результаты Исследований</h4>
+        <a href="https://k-research.kz/research/television">TV ↗</a>
+        <a href="https://k-research.kz/research/radio">Радио ↗</a>
+        <a href="https://k-research.kz/research/internet">Интернет ↗</a>
+        <a href="https://k-research.kz/research/mmi">MMI ↗</a>
+        <a href="https://k-research.kz/research/adex">ADEX ↗</a>
+        <a href="https://k-research.kz/research/analytics">Аналитика ↗</a>
+
+        <h4 class="second-title">Участникам Исследований</h4>
+        <a href="https://k-research.kz/public/research-web-index">Исследование Интернета. WEB-Index</a>
+        <a href="https://k-research.kz/protected">Защита персональных данных</a>
+        <a href="https://k-research.kz/faq">Ответы на вопросы</a>
+      </div>
+
+      <div class="footer-column footer-form">
+        <h4>Подписаться на информационные рассылки K Research Central Asia</h4>
+        <input type="text" placeholder="Ваше имя">
+        <input type="email" placeholder="Ваш e-mail">
+        <button type="button">Подписаться</button>
+
+        <h4 class="second-title">Вход для клиентов</h4>
+        <input type="text" placeholder="Логин">
+        <input type="password" placeholder="Пароль">
+        <button type="button">Войти</button>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="cookie-link">
+      <a href="#">Об использовании файлов cookie</a>
+    </div>
+    <div class="copyright-row">
+      <span>© 2026 K Research Central Asia. All rights reserved.</span>
+      <span>Created by <a href="http://brandstudio.kz">BrandStudio</a></span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
